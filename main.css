@@ -4,8 +4,20 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	font-family: "Noto Sans", sans-serif;
 	text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Noto Sans", sans-serif;
+}
+p,
+div {
+	font-family: "Nobile", Helvetica, Arial, sans-serif;
+	font-family: "Roboto", Helvetica, Times, serif;
 }
 
 .wrapper {
@@ -29,9 +41,11 @@ nav {
 }
 
 #intro {
+	justify-content: center;
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
+	height: 100vh;
 }
 
 h1 {
@@ -81,7 +95,7 @@ a:hover {
 
 #short-bio {
 	position: relative;
-	font-size: 30px;
+	font-size: 20px;
 }
 
 .hobbytext {
@@ -103,6 +117,10 @@ a:hover {
 	#nav-buttons {
 		display: flex;
 		flex-flow: row wrap;
+	}
+
+	#short-bio {
+		font-size: 30px;
 	}
 }
 
@@ -155,20 +173,6 @@ a:hover {
 
 	.listbar:before {
 		left: 200px;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		font-family: "Roboto", Helvetica, Times, serif;
-		display: inline-block;
-	}
-	p,
-	div {
-		font-family: "Nobile", Helvetica, Arial, sans-serif;
 	}
 }
 
