@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- hi -->
+<!-- Thank you  Daniel Bruce at Entypo for the icons! -->
 <html lang="en">
 
 <head>
@@ -8,7 +8,7 @@
 	<meta charset='UTF-8' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="./main.css">
 	<link rel="icon" type="image/png" href="images/">
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
 </head>
@@ -21,13 +21,15 @@
 
 		<nav>
 			<ul class="navlist" style="list-style:none;">
-				<li class="nav_list-item" id="landingSite">hi</li>
-				<li class="nav_list-item" style="margin-left:auto;">
-					<a href="#social-button-wrapper">Work</a>
-				</li>
-				<li class="nav_list-item">
-					<a href="#social-button-wrapper">Contact</a>
-				</li>
+				<li class="nav_list-item" id="landingSite"></li>
+				<div id="nav-buttons">
+					<li class="nav_list-item">
+						<a href="#social-button-wrapper">Work</a>
+					</li>
+					<li class="nav_list-item">
+						<a href="#social-button-wrapper">Contact</a>
+					</li>
+				</div>
 			</ul>
 		</nav>
 
@@ -41,7 +43,7 @@
 				<div class="intro-right">
 					<h1>haejin jo</h1>
 					<div id="short-bio">
-						<h2 style="font-size:100%; font:inherit;">
+						<h2>
 							I'm a rising senior at
 							<a href="https://ucla.edu">UCLA</a> and
 							<a href="https://www.kwangjufs.org/">Kwangju Foreign School</a> alumnus.
@@ -53,32 +55,61 @@
 			</div>
 		</section>
 
-		<section class="listbar" style="background-color:orange">
+		<section class="listbar">
 
-			<h2>Currently</h2>
-			<div class="hobbytext">
-				<p>
-					<h3>Listening</h3> Because The Internet -- Childish Gambino</p>
-				<p>
-					<h3>Reading</h3> Just Mercy by Bryan Stevenson, Consider the Lobster by David Foster Wallace</p>
-				<p>
-					<h3>Learning</h3>Ice Skating, Korean Case Stacking Phenomenon</p>
+			<div id="hobby-header">
+				<h2>Currently</h2>
 			</div>
-		</section>
 
-		<footer>
-			<div id="social-button-wrapper">
-				<a href="https://github.com/haejinjo" class="hvr-wobble-vertical">
-					<img class="logo-img" src=i mages/github.png>
-				</a>
-				<a href="https://www.instagram.com/haejfundmanager" class="hvr-wobble-vertical">
-					<img class="logo-img" src=i mages/insta.png>
-				</a>
-				<a href="https://www.linkedin.com/in/haejin-jo-27b212b8?trk=nav_responsive_tab_profile_pic" class="hvr-wobble-vertical">
-					<img class="logo-img" src=i mages/linkedin.png>
-				</a>
+			<div id="hobby-images">
+
+				<img class="hobby-img" src=images/note.svg>
+
+				<img class="hobby-img" src=images/book.svg>
+
+				<img class="hobby-img" src=images/tree.svg>
 			</div>
-		</footer>
+			<ul class="hobbytext">
+
+
+				<li id="hobby-item">
+					<p>
+						<h3>LISTENING</h3>
+
+						<p>Because The Internet -- Childish Gambino</p>
+					</p>
+				</li>
+				<li id="hobby-item">
+					<p>
+						<h3>READING</h3>
+
+						<p>Just Mercy by Bryan Stevenson
+							<br> Consider the Lobster by David Foster Wallace</p>
+					</p>
+				</li>
+				<li id="hobby-item">
+					<p>
+						<h3>LEARNING</h3>
+
+						<p>Ice Skating, Korean Case Stacking Phenomenon</p>
+					</p>
+				</li>
+	</div>
+	</section>
+
+	<footer>
+		<div id="social-button-wrapper">
+			<a href="https://github.com/haejinjo" class="hvr-wobble-vertical">
+				<img class="logo-img" src=images/github.png>
+			</a>
+			<a href="https://www.instagram.com/haejfundmanager" class="hvr-wobble-vertical">
+				<img class="logo-img" src=images/insta.png>
+			</a>
+			<a href="https://www.linkedin.com/in/haejin-jo-27b212b8?trk=nav_responsive_tab_profile_pic" class="hvr-wobble-vertical">
+				<img class="logo-img" src=images/linkedin.png>
+			</a>
+		</div>
+	</footer>
 	</div>
 
 
