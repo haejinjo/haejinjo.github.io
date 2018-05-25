@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-	<title> Haejin Jo's Page </title>
+	<title> Haejin's Site </title>
 
 	<meta charset='UTF-8' />
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
@@ -24,10 +24,10 @@
 				<li class="nav_list-item" id="landingSite"></li>
 				<div id="nav-buttons">
 					<li class="nav_list-item">
-						<a href="#social-button-wrapper">Work</a>
+						<a id="aboutme">About Me</a>
 					</li>
 					<li class="nav_list-item">
-						<a href="#social-button-wrapper">Contact</a>
+						<a id="contact">Contact</a>
 					</li>
 				</div>
 			</ul>
@@ -47,7 +47,10 @@
 							I'm a rising senior at
 							<a href="https://ucla.edu">UCLA</a> and
 							<a href="https://www.kwangjufs.org/">Kwangju Foreign School</a> alumnus.
-							<br> I enjoy writing. I have a long list of failures and then some good stuff.
+							<br> I enjoy writing. I have a long list of failures and then some good stuff
+							<a id="asterisk">
+								<sup>*</sup>
+							</a>
 							<br>
 						</h2>
 					</div>
@@ -55,7 +58,7 @@
 			</div>
 		</section>
 
-		<section class="listbar">
+		<section id="listbar">
 
 			<div id="hobby-header">
 				<h2>Currently</h2>
@@ -94,24 +97,88 @@
 						<p>Ice Skating, Korean Case Stacking Phenomenon</p>
 					</p>
 				</li>
-	</div>
-	</section>
 
-	<footer>
-		<div id="social-button-wrapper">
-			<a href="https://github.com/haejinjo" class="hvr-wobble-vertical">
-				<img class="logo-img" src=images/github.png>
-			</a>
-			<a href="https://www.instagram.com/haejfundmanager" class="hvr-wobble-vertical">
-				<img class="logo-img" src=images/insta.png>
-			</a>
-			<a href="https://www.linkedin.com/in/haejin-jo-27b212b8?trk=nav_responsive_tab_profile_pic" class="hvr-wobble-vertical">
-				<img class="logo-img" src=images/linkedin.png>
-			</a>
-		</div>
-	</footer>
+		</section>
+
+		<section id="projects">
+			<h2 style="text-align: center;"> Little Milestones </h2>
+			<div class="projects-container">
+				<a href="https://itunes.apple.com/us/app/impromptu-daily-creative-writing-practice/id1270831577?mt=8">
+					<div class="project-link-wrapper">
+						<img class="project-link-img" src="images/impromptuLogo.png">
+						<div class="project-link-content">
+							<h3 class="link-content__header"> Impromptu, for Daily Creative Writing</h3>
+						</div>
+					</div>
+				</a>
+
+				<a href="./blog/_posts/2018-05-21-spikr.ext">
+					<div class="project-link-wrapper">
+
+						<img class="project-link-img" src="images/praatpic.png">
+						<div class="project-link-content">
+							<h3 class="link-content__header"> Computer Speech Synthesis </h3>
+						</div>
+					</div>
+				</a>
+
+
+				<a href="./blog/_posts/2018-05-21-breathr-web-app.ext">
+					<div class="project-link-wrapper">
+						<img class="project-link-img" src="images/breathrLogin.png">
+						<div class="project-link-content">
+							<h3 class="link-content__header"> Breathr Login Flow </h3>
+						</div>
+					</div>
+				</a>
+
+			</div>
+		</section>
+		<footer>
+
+			<h2 style="padding-left: 50px;"> Let's start talking! </h2>
+			<div id="social-button-wrapper">
+				<a href="https://github.com/haejinjo" class="hvr-wobble-vertical">
+					<img class="logo-img" src=images/github.png>
+				</a>
+				<a href="https://www.instagram.com/haejfundmanager" class="hvr-wobble-vertical">
+					<img class="logo-img" src=images/insta.png>
+				</a>
+				<a href="https://www.linkedin.com/in/haejin-jo-27b212b8?trk=nav_responsive_tab_profile_pic" class="hvr-wobble-vertical">
+					<img class="logo-img" src=images/linkedin.png>
+				</a>
+			</div>
+		</footer>
+	</div>
 	</div>
 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+	<script> 
+		$(document).ready(function () {
+			$("#asterisk").click(function () {
+				$('html,body').animate({
+					scrollTop: $("#projects").offset().top
+				},
+					'slow');
+			});
+
+			$("#aboutme").click(function () {
+				$('html,body').animate({
+					scrollTop: $("#listbar").offset().top
+				},
+					'slow');
+			});
+
+			$("#contact").click(function () {
+				$('html,body').animate({
+					scrollTop: $("footer").offset().top
+				},
+					'slow');
+			});
+		})
+
+	</script>
 
 	<script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
 </body>

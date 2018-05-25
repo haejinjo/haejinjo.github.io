@@ -21,13 +21,13 @@ div {
 }
 
 .wrapper {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: 10vh 90vh 100vh 100vh 10vh;
 }
 
 nav {
 	font-size: 1.5rem;
-	padding: 0.5em;
+	padding: 1em;
 	grid-template-rows: 1fr;
 }
 
@@ -107,23 +107,6 @@ a:hover {
 	align-items: center;
 }
 
-@media only screen and (min-width: 768px) {
-	.navlist {
-		display: flex;
-		justify-content: space-between;
-		flex: 1 1 0;
-	}
-
-	#nav-buttons {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
-	#short-bio {
-		font-size: 30px;
-	}
-}
-
 .hobby-img {
 	height: 20px;
 }
@@ -141,7 +124,7 @@ a:hover {
 	grid-row-gap: 60px;
 }
 
-.listbar {
+#listbar {
 	display: grid;
 	grid-template-columns: 1fr 30px 2fr;
 	justify-items: start;
@@ -149,13 +132,55 @@ a:hover {
 	padding-top: 5rem;
 }
 
-.listbar:before {
+#listbar:before {
 	width: 65%;
 	content: "";
 	left: 100px;
 	position: absolute;
 	border-bottom: 1px solid lightgrey;
 	padding-top: 4rem;
+}
+
+.projects {
+	display: grid;
+	margin: 4rem;
+}
+.projects-container {
+	padding-left: 10px;
+	display: grid;
+	grid-column-gap: 3em;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	align-items: center;
+	margin: 1rem;
+}
+.project-link-wrapper {
+	display: grid;
+	grid-template-rows: 3fr 1fr;
+}
+.project-link-img {
+	height: auto;
+	width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+	.navlist {
+		display: flex;
+		justify-content: space-between;
+		flex: 1 1 0;
+	}
+
+	#nav-buttons {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	#short-bio {
+		font-size: 30px;
+	}
+
+	.projects {
+		height: 100vh;
+	}
 }
 
 @media only screen and (min-width: 968px) {
