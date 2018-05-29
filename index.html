@@ -19,6 +19,7 @@
 
 	<div class="wrapper">
 
+		<!-- Navigation Bar -->
 		<nav>
 			<ul class="navlist" style="list-style:none;">
 				<li class="nav_list-item" id="landingSite"></li>
@@ -33,6 +34,11 @@
 			</ul>
 		</nav>
 
+		<div id="sidenav">
+
+		</div>
+
+		<!-- First Impressions Count ;) -->
 		<section id="intro">
 
 			<div class="intro_couplet">
@@ -58,7 +64,8 @@
 			</div>
 		</section>
 
-		<section id="listbar">
+		<!-- Cute lil Hobbies-->
+		<section id="aboutbar">
 
 			<div id="hobby-header">
 				<h2>Currently</h2>
@@ -101,6 +108,7 @@
 
 		</section>
 
+		<!-- Yung Portfolio -->
 		<section id="projects">
 			<h2 style="text-align: center;"> Little Milestones </h2>
 			<div class="projects-container">
@@ -135,7 +143,9 @@
 
 			</div>
 		</section>
-		<footer>
+
+		<!-- Contact Footer!  -->
+		<section id="footer">
 
 			<h2 style="padding-left: 50px;"> Let's start talking! </h2>
 			<div id="social-button-wrapper">
@@ -149,14 +159,37 @@
 					<img class="logo-img" src=images/linkedin.png>
 				</a>
 			</div>
-		</footer>
+		</section>
 	</div>
 	</div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	<!-- JAVASCRIPT START -->
 
-	<script> 
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"> </script>
+	<script type="text/javascript"> 
+
 		$(document).ready(function () {
+			var addSideNav = function () {
+				var count = $(".wrapper section").length;
+
+				for (var i = 0; i < count; i++) {
+					var circleNode = document.createElement("a");
+					var targetId = $(".wrapper section")[i].id;
+					circleNode.id = "nav2" + targetId;
+					circleNode.href = "#" + document.getElementsByTagName("section")[i].id
+
+					circleNode.click(function () {
+						$('html,body').animate({
+							scrollTop: $(targetId).offset().top
+						}, 'slow');
+					});
+					document.getElementById("sidenav").appendChild(circleNode);
+				}
+			}
+
+			addSideNav();
+
+
 			$("#asterisk").click(function () {
 				$('html,body').animate({
 					scrollTop: $("#projects").offset().top
@@ -166,22 +199,20 @@
 
 			$("#aboutme").click(function () {
 				$('html,body').animate({
-					scrollTop: $("#listbar").offset().top
+					scrollTop: $("#aboutbar").offset().top
 				},
 					'slow');
 			});
 
 			$("#contact").click(function () {
 				$('html,body').animate({
-					scrollTop: $("footer").offset().top
+					scrollTop: $("#footer").offset().top
 				},
 					'slow');
 			});
-		})
 
+		});
 	</script>
-
-	<script src="js/scrollmagic/minified/ScrollMagic.min.js"></script>
 </body>
 
 </html>

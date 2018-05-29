@@ -22,7 +22,7 @@ div {
 
 .wrapper {
 	display: grid;
-	grid-template-rows: 10vh 90vh 100vh 100vh 10vh;
+	grid-template-rows: 10vh 90vh 100vh 100vh 100vh;
 }
 
 nav {
@@ -38,6 +38,40 @@ nav {
 
 .nav_list-item {
 	padding: 0 20px;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+	position: relative;
+}
+
+#sidenav {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 15vh;
+	width: 3vw;
+	right: 1.5vw;
+	position: fixed;
+	top: 50vh;
+	z-index: 1;
+}
+
+#sidenav a {
+	width: 4vh;
+	height: 4vh;
+	background-color: lightgray;
+	border-radius: 50px;
+	opacity: 0.3;
+	transition: opacity 0.6s;
+	-webkit-transition: opacity 0.6s;
+}
+
+#sidenav a:hover {
+	background-color: darkgray;
+	opacity: 0.9;
 }
 
 #intro {
@@ -124,21 +158,20 @@ a:hover {
 	grid-row-gap: 60px;
 }
 
-#listbar {
+#aboutbar {
 	display: grid;
 	grid-template-columns: 1fr 30px 2fr;
 	justify-items: start;
 	align-items: center;
-	padding-top: 5rem;
 }
 
-#listbar:before {
-	width: 65%;
+#aboutbar:before {
+	width: 50vw;
 	content: "";
-	left: 100px;
+	left: 25vw;
 	position: absolute;
 	border-bottom: 1px solid lightgrey;
-	padding-top: 4rem;
+	padding-top: 1rem;
 }
 
 .projects {
@@ -149,17 +182,18 @@ a:hover {
 	padding-left: 10px;
 	display: grid;
 	grid-column-gap: 3em;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 	align-items: center;
 	margin: 1rem;
 }
 .project-link-wrapper {
 	display: grid;
 	grid-template-rows: 3fr 1fr;
+	min-height: 20em;
 }
 .project-link-img {
-	height: auto;
-	width: 100%;
+	height: 100%;
+	width: 80%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -194,10 +228,6 @@ a:hover {
 	.intro_couplet {
 		display: grid;
 		grid-template-columns: 1fr 2fr;
-	}
-
-	.listbar:before {
-		left: 200px;
 	}
 }
 
