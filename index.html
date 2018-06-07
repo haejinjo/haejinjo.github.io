@@ -178,7 +178,7 @@
 					circleNode.id = "nav2" + targetId;
 					circleNode.href = "#" + document.getElementsByTagName("section")[i].id
 
-					circleNode.click(function () {
+					$(circleNode.id).click(function () {
 						$('html,body').animate({
 							scrollTop: $(targetId).offset().top
 						}, 'slow');

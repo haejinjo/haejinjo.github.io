@@ -1,5 +1,0 @@
-#!/bin/bash
-
-rm -rf ../_sites 
-rm -rf ../.sass-cache
-rm ../Gemfile.lock
