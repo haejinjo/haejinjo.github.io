@@ -25,10 +25,21 @@ div {
 	grid-template-rows: 10vh 90vh 100vh 100vh 100vh;
 }
 
-nav {
+/* nav {
 	font-size: 1.5rem;
 	padding: 1em;
 	grid-template-rows: 1fr;
+} */
+
+header {
+    font-size: 1.4rem;
+    padding: 0.8em;
+    grid-template-rows: 1fr;
+    position: fixed;
+    z-index: 1;
+    background: linear-gradient(#FFF 60%, #FFFFFF00);
+    display: flex;
+    width: 100%;
 }
 
 .navlist {
@@ -193,7 +204,7 @@ a:hover {
 }
 .project-link-img {
 	height: 100%;
-	width: 80%;
+	width: 40%;
 }
 
 @media only screen and (min-width: 768px) {
