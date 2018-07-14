@@ -202,13 +202,16 @@ a:hover {
 	margin: 1rem;
 }
 .project-link-wrapper {
-	display: grid;
-	grid-template-rows: 3fr 1fr;
-	min-height: 20em;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    min-height: 20em;
+    align-items: center;
 }
 .project-link-img {
-	height: 100%;
-	width: 100%;
+    display: flex;
+    height: auto;
+    width: 100%;
+    align-content: center;
 }
 
 @media only screen and (min-width: 768px) {
