@@ -68,7 +68,7 @@ section {
 	justify-content: space-around;
 	height: 15vh;
 	width: 3vw;
-	right: 1.5vw;
+	right: 2rem;
 	position: fixed;
 	top: 50vh;
 	z-index: 1;
@@ -197,7 +197,7 @@ a:hover {
 	padding-top: 20px;
 	display: grid;
 	grid-column-gap: 3em;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
 	align-items: center;
 	margin: 1rem;
 }
